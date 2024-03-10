@@ -42,7 +42,7 @@ You can see an [example static project](https://github.com/letsdiscodev/example-
 }
 ```
 
-Most importantly, `publicPath` specifies the directory in your repo whose files will be deployed publicly.
+Most importantly, `publicPath` specifies the directory from which files will be deployed publicly.
 
 Either grab the [`disco.json`](https://github.com/letsdiscodev/example-static-site/blob/main/disco.json) file from the example repository above and copy it into your repo, or [fork the example repo](https://github.com/letsdiscodev/example-static-site/fork).
 
