@@ -22,6 +22,8 @@ const config = {
   organizationName: "letsdiscodev", // Usually your GitHub org/user name.
   projectName: "docs.letsdisco.dev", // Usually your repo name.
 
+  trailingSlash: false,
+
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
