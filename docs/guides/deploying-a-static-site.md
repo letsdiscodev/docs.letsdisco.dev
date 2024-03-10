@@ -49,15 +49,14 @@ Either grab the [`disco.json`](https://github.com/letsdiscodev/example-static-si
 ### Initialize your disco project
 
 Replace:
-- the `YOURUSERNAME/YOURREPONAME` below with the path to your GitHub repo (e.g., `john/my-project`)
-- `YOURDOMAINNAME` with the domain you wish to deploy your static site to (e.g., `static.example.com`)
-- `YOURSERVERIP` with the IP address of the server you're deploying to
+- the `USERNAME/REPONAME` below with the path to your GitHub repo (e.g., `john/my-project`)
+- `DOMAINNAME` with the domain you wish to deploy your static site to (e.g., `static.example.com`)
 
 ```bash
 disco projects:add \
     --name my-static-site \
-    --github-repo git@github.com:YOURUSERNAME/YOURREPONAME.git \
-    --domain YOURDOMAINNAME \
+    --github-repo git@github.com:USERNAME/REPONAME.git \
+    --domain DOMAINNAME \
 ```
 
 :::tip
