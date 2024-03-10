@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ### Pre-requisites
 
-- You will need a domain name to deploy your static site to. You can deploy to a subdomain of course
+- You will need a domain name to deploy your static site to (you can also deploy to a subdomain)
 - Make sure that [disco is installed](../installation) on your machine
 - Setup a server to deploy disco to
 
