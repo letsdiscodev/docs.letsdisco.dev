@@ -1,4 +1,22 @@
-# Website
+# docs.letsdisco.dev
+
+### how to run locally
+
+- run the docs locally:
+
+```bash
+# first time only
+npm install
+
+#every time 
+npm run start
+```
+
+- then go to http://localhost:3000
+
+---
+---
+---
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 

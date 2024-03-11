@@ -10,9 +10,13 @@ sidebar_position: 1
 - Make sure that [disco is installed](../installation) on your machine
 - Setup a server to deploy disco to
 
-  We recommend signing up to [Digital Ocean](https://www.digitalocean.com/). Then, create a droplet in a region near you running **Ubuntu 23**. A "Regular" $6/month machine is enough to get started.
+  We recommend signing up to [Digital Ocean](https://www.digitalocean.com/) for this. Create a droplet in a region near you running **Ubuntu 23**. A "Regular" $6/month machine is enough to get started.
 
   Make sure to [setup your private SSH key](https://docs.digitalocean.com/products/droplets/how-to/add-ssh-keys/) on Digital Ocean i.e. you should be able to run `ssh root@(a droplet IP)` and login without any password.
+
+### Prepare your domain name
+
+Create an A record for your domain (or subdomain) and point it to your Digital Ocean's machine IP address.
 
 ### Initialize your server with disco
 
