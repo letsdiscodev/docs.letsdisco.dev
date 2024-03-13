@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Deploying a Static Site
 
-<input type="checkbox" /> make sure that [disco is installed](../installation)  
+<input type="checkbox" /> make sure that the [disco cli is installed on your machine](../installation)  
 <input type="checkbox" /> you will need a domain or subdomain that you control  
 <input type="checkbox" /> setup a digital ocean droplet - specifically, anything above a $6 droplet is good. set it up with Ubuntu >23  
 <input type="checkbox" /> create an `A` record on your domain or subdomain and point it to your server IP  
