@@ -11,7 +11,7 @@ sidebar_position: 2
 <input type="checkbox" /> make sure that you can run `ssh@(server IP)` and login without a password  
 <input type="checkbox" /> wait ~2 minutes after the server is available to make sure it's fully setup  
 <input type="checkbox" /> run `disco init root@(server IP)`  
-<input type="checkbox" /> fork the [example repo](https://github.com/letsdiscodev/example-flask-site/fork)  
+<input type="checkbox" /> fork the [sample flask site repo](https://github.com/letsdiscodev/example-flask-site/fork)  
 <input type="checkbox" /> create the disco project (replace *USERNAME*, *REPO* and *DOMAIN*):
 
 ```bash
