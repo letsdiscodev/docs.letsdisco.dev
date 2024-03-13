@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Deploying a Static Site
+# Deploying a Flask Site
 
 <input type="checkbox" /> make sure that [disco is installed](../installation)  
 <input type="checkbox" /> you will need a domain or subdomain that you control  
@@ -11,12 +11,12 @@ sidebar_position: 1
 <input type="checkbox" /> make sure that you can run `ssh@(server IP)` and login without a password  
 <input type="checkbox" /> wait ~2 minutes after the server is available to make sure it's fully setup  
 <input type="checkbox" /> run `disco init root@(server IP)`  
-<input type="checkbox" /> fork the [example repo](https://github.com/letsdiscodev/example-static-site/fork)  
+<input type="checkbox" /> fork the [example repo](https://github.com/letsdiscodev/example-flask-site/fork)  
 <input type="checkbox" /> create the disco project (replace *USERNAME*, *REPO* and *DOMAIN*):
 
 ```bash
 disco projects:add \
-    --name my-static-site \
+    --name my-flask-site \
     --github-repo git@github.com:USERNAME/REPO.git \
     --domain DOMAINNAME \
 ```
