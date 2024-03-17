@@ -12,7 +12,7 @@ sidebar_position: 2
 ### Setup steps
 - setup the server by running `disco init root@(SERVER IP)`
 - fork the [django sample site repo](https://github.com/letsdiscodev/example-django-site)
-- create the django project for the django app:
+- create a disco project for the django app:
 
 ```bash
 disco projects:add \
@@ -21,7 +21,7 @@ disco projects:add \
   --github-repo git@github.com:USER/REPO.git
 ```
 
-- add the deploy key and webhook to the github setting (as per the output of the previous command)
+- add the deploy key and webhook to the github setting (per the output of the previous command)
 
 - install postgres on your server:
 
@@ -53,7 +53,7 @@ disco env:set --project sample-django-site DJANGO_SETTINGS_MODULE="samplesite.se
 - let's cause disco to deploy your django project by doing an empty git commit on the django repository and pushing it to github:
 
 ```bash
-# change the directory name below with the page to your django project
+# change the directory name below with the path to your django project
 cd /YOUR/DJANGO/REPO
 git commit --allow-empty -m "trigger disco deploy"
 git push
@@ -65,6 +65,8 @@ git push
 disco deploy:output --project sample-django-site
 ```
 
+- your site should now be live on your domain, check it out!
+
 - create the django admin user:
 
 ```bash
@@ -72,5 +74,5 @@ disco deploy:output --project sample-django-site
 disco command sample-django-site web "python manage.py createsuperuser --noinput --username admin --email SOME@EMAIL.COM"
 ```
 
-- you're done! your site is now live on your domain. you can: go to `/admin` and login with your admin account (`admin` username as set above, and whichever password you set above as the `DJANGO_SUPERUSER_PASSWORD`)
-- do good work, then `git push` -- your new version will be live in a few seconds!
+- you're done! your site should now be live and you can go to `/admin` and login with your admin account -- `admin` username as set above, and whichever password you set above as the `DJANGO_SUPERUSER_PASSWORD`
+- do good work, then `git add`, `git commit` and `git push` -- your new version will be live in a few seconds!
