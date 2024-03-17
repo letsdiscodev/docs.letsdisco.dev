@@ -7,7 +7,7 @@ sidebar_position: 2
 ### Pre-requisites
 - you will need a domain name
 - start a droplet on digital ocean. make sure that you can ssh into this droplet without a password (i.e. using your ssh key). wait at least 2 minutes after the droplet is ready before continuing.
-- if you're setting up a small droplet (about $6/month), follow [the instructions to extend your server memory](/misc/extending-your-server-memory).
+- if you're setting up a small droplet (with about 1-2 Gb of memory, or if it's approximately $6/month), follow [the instructions to extend your server memory](/misc/extending-your-server-memory).
 
 ### Setup steps
 - create an A record for your domain pointing to the IP of your server
