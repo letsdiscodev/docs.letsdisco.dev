@@ -10,6 +10,7 @@ sidebar_position: 2
 - if you're setting up a small droplet (about $6/month), follow [the instructions to extend your server memory](/misc/extending-your-server-memory).
 
 ### Setup steps
+- create an A record for your domain pointing to the IP of your server
 - setup the server by running `disco init root@(SERVER IP)`
 - fork the [django sample site repo](https://github.com/letsdiscodev/example-django-site)
 - create a disco project for the django app:
