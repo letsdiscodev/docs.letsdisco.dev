@@ -47,3 +47,10 @@ disco projects:add \
     --domain DOMAINNAME
 ```
 
+### run
+
+run a command on a remote server
+
+```bash
+disco run --project PROJECTNAME "ls -la"
+```
