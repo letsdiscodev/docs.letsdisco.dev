@@ -4,14 +4,6 @@ sidebar_position: 5
 
 # disco CLI reference
 
-### init
-
-initializes a server to run the disco daemon
-
-```bash
-disco init root@(SERVER-IP)
-```
-
 ### deploy:list
 
 see the list of deployments for a project
@@ -22,18 +14,42 @@ disco deploy:list --project PROJECTNAME
 
 ### deploy:output
 
-see the output for a particular deployment. get the list of deployments for a project using `disco deploy:list`
+see the output for the latest deployment of your project
 
 ```bash
-disco deploy:output --project PROJECTNAME --deployment DEPLOYMENTNUMBER
+disco deploy:output --project PROJECTNAME
+```
+
+### env:list
+
+see the list of your environment variables for a project
+
+```bash
+disco env:list --project PROJECTNAME
+```
+
+### env:set
+
+set an environment variable for a project
+
+```bash
+disco env:set --project sample-django-site MY_ENV_VAR="some value"
+```
+
+### init
+
+initializes a server to run the disco daemon
+
+```bash
+disco init root@(SERVER-IP)
 ```
 
 ### logs
 
-see the real time logs for a project
+see the real time logs for your server
 
 ```bash
-disco logs --project PROJECTNAME
+disco logs
 ```
 
 ### projects:add
@@ -49,8 +65,8 @@ disco projects:add \
 
 ### run
 
-run a command on a remote server
+run a bash command within a project
 
 ```bash
-disco run --project PROJECTNAME "ls -la"
+disco run --project PROJECTNAME "python dbmigrate.py"
 ```
