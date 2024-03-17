@@ -84,7 +84,7 @@ const config = {
           //   label: 'Tutorial',
           // },
           {
-            href: "https://github.com/letsdiscodev/disco-cli",
+            href: "https://github.com/letsdiscodev",
             label: "GitHub",
             position: "right",
           },
