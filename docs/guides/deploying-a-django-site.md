@@ -75,5 +75,5 @@ disco deploy:output --project sample-django-site
 disco command sample-django-site web "python manage.py createsuperuser --noinput --username admin --email SOME@EMAIL.COM"
 ```
 
-- you're done! your site should now be live and you can go to `/admin` and login with your admin account -- `admin` username as set above, and whichever password you set above as the `DJANGO_SUPERUSER_PASSWORD`
+- you're done! your site should now be live and you can go to `/admin` and login with your admin account -- `admin` username as set above, and whichever password you set as the `DJANGO_SUPERUSER_PASSWORD`
 - do good work, then `git add`, `git commit` and `git push` -- your new version will be live in a few seconds!
