@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# CLI Installation
+# CLI Installation and Update
 
 ## macOS
 
@@ -26,4 +26,4 @@ The disco command line tool is currently only packaged for macOS.
 
 If you're comfortable installing Python packages, you can install the command line tool from [the GitHub repository](https://github.com/letsdiscodev/disco-cli).
 
-We hope to provide more package options in the future.
+We hope to provide more packaging options in the future.
