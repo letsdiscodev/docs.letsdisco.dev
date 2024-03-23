@@ -18,7 +18,7 @@ sidebar_position: 2
 disco projects:add \
     --name my-flask-site \
     --github-repo git@github.com:USERNAME/REPO.git \
-    --domain DOMAINNAME \
+    --domain DOMAINNAME
 ```
 
 <input type="checkbox" /> after the previous `disco projects:add ...` command is done, follow the steps to setup the deployment ssh key, and the webhook url  
