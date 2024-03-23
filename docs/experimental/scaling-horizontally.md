@@ -2,14 +2,13 @@
 sidebar_position: 1
 ---
 
+# Scaling Horizontally
+
 :::warning
 
 This is all subject to change. You should be comfortable with other parts of disco before attempting this. Have fun :-)
 
 :::
-
-
-# Scaling Horizontally
 
 The example below scales our sample "dummy" project to two nodes (i.e. servers).
 
