@@ -10,7 +10,7 @@ This is all subject to change. You should be comfortable with other parts of dis
 
 :::
 
-The example below scales our sample "dummy" project to two nodes (i.e. servers).
+The example below scales a project - a web app with a worker - to two nodes (i.e. servers).
 
 Note: `DOMAINNAME-FOR-REGISTRY` should point to the `SERVER1-IP` and be different than the `DOMAINNAME` for the dummy project.
 
