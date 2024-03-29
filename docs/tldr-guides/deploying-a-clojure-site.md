@@ -19,7 +19,7 @@ sidebar_position: 5
 
 ```bash
 disco projects:add \
-    --name my-go-site \
+    --name my-clojure-site \
     --github-repo git@github.com:USERNAME/REPO.git \
     --domain DOMAINNAME
 ```
