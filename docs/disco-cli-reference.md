@@ -4,6 +4,13 @@ sidebar_position: 5
 
 # CLI reference
 
+:::info
+
+Many CLI commands are missing from the list below as we port the command line tool to a new architecture. Stay tuned!
+
+:::
+
+
 # Commands
 <!-- commands -->
 * [`disco env:get [ENVVAR]`](#disco-envget-envvar)
