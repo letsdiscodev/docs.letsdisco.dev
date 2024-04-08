@@ -4,6 +4,12 @@ sidebar_position: 2
 
 # CLI Installation and Update
 
+:::info
+
+A new rewritten CLI is coming, with many more bundling options. It will be available for macos, linux, and windows. Stay tuned!
+
+:::
+
 ## macOS
 
 Assuming you already have [homebrew](https://brew.sh/) installed, run:
