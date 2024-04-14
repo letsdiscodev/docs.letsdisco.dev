@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Deploying a Flask Site
+# Flask
 
 <input type="checkbox" /> make sure that the [disco cli is installed on your machine](../installation)  
 <input type="checkbox" /> you will need a domain or subdomain that you control  

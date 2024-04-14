@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Deploying a Static Site
+# Static Site (TLDR version)
 
 <input type="checkbox" /> make sure that the [disco cli is installed on your machine](../installation)  
 <input type="checkbox" /> you will need a domain or subdomain that you control  

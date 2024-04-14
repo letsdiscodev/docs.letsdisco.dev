@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
 ---
 
-# Deploying a Django + PostgreSQL Site
+# Django + PostgreSQL
 
 ### Pre-requisites
 - you will need a domain name

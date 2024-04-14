@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
-# Deploying a Flask + SQLite Site
+# Flask + SQLite
 
 - same first steps as [deploying a flask site](./deploying-a-flask-site)
 - [use this sample repo](https://github.com/letsdiscodev/example-flask-sqlite-site) instead

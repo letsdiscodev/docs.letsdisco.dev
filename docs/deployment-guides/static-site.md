@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Deploying a Static Site
+# Static Site
 
 ### Pre-requisites
 

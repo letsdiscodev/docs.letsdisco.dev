@@ -1,8 +1,8 @@
 ---
-sidebar_position: 7
+sidebar_position: 9
 ---
 
-# Deploying a Jekyll Static Site
+# Clojure
 
 ### Pre-requisites
 
@@ -14,12 +14,12 @@ sidebar_position: 7
 
 - point the domain name to the server's IP address
 - run `disco init root@(SERVER IP)`
-- fork [this repo](https://github.com/letsdiscodev/example-jekyll-site)
+- fork [this repo](https://github.com/letsdiscodev/example-clojure-site)
 - create a new disco project:
 
 ```bash
 disco projects:add \
-    --name my-jekyll-site \
+    --name my-clojure-site \
     --github-repo git@github.com:USERNAME/REPO.git \
     --domain DOMAINNAME
 ```
@@ -34,3 +34,4 @@ git push
 ```
 
 - you should be live! 🚀
+

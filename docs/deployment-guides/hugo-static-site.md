@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 6
 ---
 
-# Deploying a Go Site
+# Hugo
 
 ### Pre-requisites
 
@@ -14,12 +14,12 @@ sidebar_position: 4
 
 - point the domain name to the server's IP address
 - run `disco init root@(SERVER IP)`
-- fork [this repo](https://github.com/letsdiscodev/example-go-site)
+- fork [this repo](https://github.com/letsdiscodev/example-hugo-site)
 - create a new disco project:
 
 ```bash
 disco projects:add \
-    --name my-go-site \
+    --name my-hugo-site \
     --github-repo git@github.com:USERNAME/REPO.git \
     --domain DOMAINNAME
 ```
@@ -34,4 +34,3 @@ git push
 ```
 
 - you should be live! 🚀
-
