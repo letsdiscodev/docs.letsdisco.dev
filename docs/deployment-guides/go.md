@@ -6,16 +6,13 @@ sidebar_position: 8
 
 ### Pre-requisites
 
-- you need to install the [disco CLI](../installation.md) on your development machine
-- you need a domain name
-- you need a server from Digital Ocean or Hetzner
+You will need a domain name for your project, the [disco CLI tool](/get-started/install-the-cli) and a server [initialized with disco](/get-started/get-a-server).
 
 ### Steps
 
-- point the domain name to the server's IP address
-- run `disco init root@(SERVER IP)`
-- fork [this repo](https://github.com/letsdiscodev/example-go-site)
-- create a new disco project:
+- Create an `A` record for your domain (or subdomain) and point it to your server's IP address.
+- Fork [this example Go repo](https://github.com/letsdiscodev/example-go-site)
+- Add the project to your server by running the command below:
 
 ```bash
 disco projects:add \
@@ -24,14 +21,26 @@ disco projects:add \
     --domain DOMAINNAME
 ```
 
-- follow the steps in the `projects:add` command output to add the deployment key + webhook to your GitHub repo
+above, replace:
+- the `USERNAME/REPONAME` below with the path to your GitHub repo (e.g., `john/my-project`)
+- `DOMAINNAME` with the domain you wish to deploy your project to (e.g., `static.example.com`)
 
-- make an empty commit and git push:
+
+:::tip
+
+After running `disco projects:add ...`, you will be asked to:
+- add a deployment key to your GitHub repo, and
+- setup a webhook
+
+Follow the instructions that are displayed in the terminal.
+
+:::
+
+- Make an empty commit and push to GitHub:
 
 ```bash
 git commit --allow-empty -m "Empty-Commit"
 git push
 ```
 
-- you should be live! 🚀
-
+- You should be live! 🚀
