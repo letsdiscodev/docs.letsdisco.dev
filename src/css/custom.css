@@ -29,10 +29,8 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.ul-no-bullets {
-  ul {
-    list-style-type: none;
-  }
+.ul-no-bullets ul {
+  list-style-type: none;
 }
 
 .pagination-nav {
