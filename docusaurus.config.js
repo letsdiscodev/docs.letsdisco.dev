@@ -116,7 +116,7 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/letsdiscodev/disco-cli",
+                href: "https://github.com/letsdiscodev/discocli",
               },
             ],
           },
