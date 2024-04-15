@@ -47,7 +47,7 @@ disco projects:add \
 - Create a database for the django project:
 
 ```bash
-disco command postgres db:add --project sample-django-site
+disco command postgres db:add -- "--project sample-django-site"
 ```
 
 - Set a few env variables on the django project:
