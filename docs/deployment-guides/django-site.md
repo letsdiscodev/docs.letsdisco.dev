@@ -21,8 +21,7 @@ disco projects:add \
 ```
 
 above, replace:
-above, replace:
-- the `USERNAME/REPONAME` below with the path to your GitHub repo (e.g., `john/my-project`)
+- the `USERNAME/REPONAME` with the path to your GitHub repo (e.g., `john/my-project`)
 - `DOMAINNAME` with the domain you wish to deploy your project to (e.g., `example.com`)
 
 :::tip
