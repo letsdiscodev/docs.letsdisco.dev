@@ -81,7 +81,7 @@ disco deploy:output --project sample-django-site
 - Create the django admin user:
 
 ```bash
-# replace the email address below with an email address you have access to
+# replace the email address below with an address you have access to
 disco command sample-django-site web "python manage.py createsuperuser --noinput --username admin --email SOME@EMAIL.COM"
 ```
 
