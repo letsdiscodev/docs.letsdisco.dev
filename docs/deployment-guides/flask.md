@@ -5,7 +5,7 @@ sidebar_position: 3
 # Flask
 
 <input type="checkbox" /> you will need a domain or subdomain that you control  
-<input type="checkbox" /> you will need [a server](http://localhost:3000/get-started/get-a-server) that's been set up with disco  
+<input type="checkbox" /> you will need [a server](http://localhost:3000/get-started/set-up-your-server) that's been set up with disco  
 <input type="checkbox" /> you will need the [disco cli](../get-started/install-the-cli)  
 
 ---

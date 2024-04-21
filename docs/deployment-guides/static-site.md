@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ### Pre-requisites
 
-You will need a domain name for your project, the [disco CLI tool](/get-started/install-the-cli) and a server [initialized with disco](/get-started/get-a-server).
+You will need a domain name for your project, the [disco CLI tool](/get-started/install-the-cli) and a server [initialized with disco](/get-started/set-up-your-server).
 
 ### Steps
 
