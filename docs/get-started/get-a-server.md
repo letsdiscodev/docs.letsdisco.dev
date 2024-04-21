@@ -2,11 +2,14 @@
 sidebar_position: 2
 ---
 
-# Get a Server
+# Set up your Server
 
 You will need a server to deploy your projects to. It's preferrable to use a dedicated machine for disco.
 
 You can get a new VPS / cloud server at Hetzner, Digital Ocean, or from many other providers.
+
+You will also need a dedicated domain name for the server itself (this is in addition to any domain you will be using for backend projects you will be deploying). We recommend using a subdomain, for example you might use `disco.yourdomain.com`. That dedicated domain (or subdomain) should point (using an `A` record) to your server's IP address.
+
 
 ### Hetzner
 
@@ -20,11 +23,14 @@ You can get a new VPS / cloud server at Hetzner, Digital Ocean, or from many oth
   - for the type of machine, choose <b>x86 (Intel/AMD)</b>
   - you should be able to pick a machine with as low as 2 Gb of memory ([see the note below on low memory servers](#note-on-servers-with-low-memory))
   - under <b>SSH Keys</b>, select one of your ssh keys. if you haven't configured your ssh keys, click the "Security" tab on the left, then add a key ([see this tutorial on Hetzner](https://community.hetzner.com/tutorials/add-ssh-key-to-your-hetzner-cloud))
+- don't forget to set up a dedicated domain or subdomain for the server itself, as in `disco.yourdomain.com` -- point that domain or subdomain to the server's IP address using an `A` record
 - after the server has been setup (usually under a minute), run
 
 ```bash
-disco init root@(server's IP)
+# replace `SERVERDOMAIN` below
+disco init root@SERVERDOMAIN
 ```
+
 
 ### Digital Ocean
 
@@ -37,11 +43,14 @@ disco init root@(server's IP)
   - for the "Droplet Type", you can pick <b>Basic</b>
   - under "CPU Options", you can pick <b>Regular</b> and a server size with as low as 2 Gb of memory ([see the note below on low memory servers](#note-on-servers-with-low-memory))
   - under "Choose Authentication Method" make sure to pick <b>SSH Key</b> and select one of your ssh keys (see this page on [how to add an ssh key to Digital Ocean](https://docs.digitalocean.com/products/droplets/how-to/add-ssh-keys/))
+- don't forget to set up a dedicated domain or subdomain for the server itself, as in `disco.yourdomain.com` -- point that domain or subdomain to the server's IP address using an `A` record
 - after the server has been setup (usually under a minute), run
 
 ```bash
-disco init root@(server's IP)
+# replace `SERVERDOMAIN` below
+disco init root@SERVERDOMAIN
 ```
+
 
 ### Note on servers with low memory
 
