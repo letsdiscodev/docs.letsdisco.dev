@@ -1,0 +1,23 @@
+### Pre-requisites
+
+- You will need a domain name for your project
+- The installed [disco CLI](/get-started/install-the-cli)
+- And a server [initialized with disco](/get-started/set-up-your-server)
+
+### Set up
+
+- If you haven't yet connected your GitHub account with your disco installation, run:
+
+```bash
+disco github:apps:add
+```
+
+You only need to do this once.
+
+### Steps
+
+- Create an `CNAME` record for your project and point it to your disco server's address
+  - let's say that your disco server's address is `disco.example.com`
+  - create a `CNAME` for your project such as `blog.example.com` (the "from") and point it to the server's `disco.example.com` address (the "to")
+- <a href={`https://github.com/${props.repo}/fork`}>Fork the example repo</a>
+- Add the project to your server by running the command below:
