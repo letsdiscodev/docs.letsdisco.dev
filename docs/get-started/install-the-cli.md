@@ -6,13 +6,13 @@ sidebar_position: 1
 
 ### Easy install
 
-The easiest way to set up the CLI under Linux and macOS is to run the following script:
+The easiest way to set up the CLI under Linux and macOS is to run:
 
 ```bash
 curl https://cli-assets.letsdisco.dev/install.sh | sh
 ```
 
-The script requires sudo and isn't compatible with Windows.
+The installation script above requires sudo.
 
 ### Tarballs
 
