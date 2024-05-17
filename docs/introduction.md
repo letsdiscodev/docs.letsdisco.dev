@@ -5,7 +5,7 @@ slug: /
 
 # Introduction
 
-**Disco lets you easily deploy web backend projects to your own servers**
+**disco lets you easily deploy web backend projects to your own servers**
 
 You will need:
 1. **A server** you can ssh into. We recommend getting a virtual server from **[Hetzner](https://www.hetzner.com/cloud/)** or **[Digital Ocean](https://www.digitalocean.com/)**
