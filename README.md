@@ -1,10 +1,8 @@
-# Disco Docs
+# disco docs
 
 https://docs.letsdisco.dev/
 
 ### how to run locally
-
-- run the docs locally:
 
 ```bash
 # first time only
