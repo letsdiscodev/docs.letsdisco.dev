@@ -71,24 +71,24 @@ const config = {
       // Replace with your project's social card
       // image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "Disco Documentation",
-        // logo: {
-        //   alt: 'My Site Logo',
-        //   src: 'img/logo.svg',
-        // },
-        items: [
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'tutorialSidebar',
-          //   position: 'left',
-          //   label: 'Tutorial',
-          // },
-          {
-            href: "https://github.com/letsdiscodev",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
+        title: "disco documentation",
+        logo: {
+          alt: 'disco',
+          src: 'img/disco-logo.svg',
+        },
+        // items: [
+        //   // {
+        //   //   type: 'docSidebar',
+        //   //   sidebarId: 'tutorialSidebar',
+        //   //   position: 'left',
+        //   //   label: 'Tutorial',
+        //   // },
+        //   {
+        //     href: "https://github.com/letsdiscodev",
+        //     label: "GitHub",
+        //     position: "right",
+        //   },
+        // ],
       },
       footer: {
         style: "dark",
@@ -103,25 +103,29 @@ const config = {
           //   ],
           // },
           {
-            title: "Community",
+            // title: "Community",
             items: [
               {
                 label: "Discord",
                 href: "https://discord.gg/7J4vb5uUwU",
               },
-            ],
-          },
-          {
-            title: "More",
-            items: [
               {
                 label: "GitHub",
                 href: "https://github.com/letsdiscodev/",
               },
+              {
+                label: "letsdisco.dev",
+                href: "https://letsdisco.dev/",
+              },
             ],
           },
+          // {
+          //   title: "More",
+          //   items: [
+          //   ],
+          // },
         ],
-        copyright: `© ${new Date().getFullYear()} Disco.`,
+        copyright: `© ${new Date().getFullYear()} disco`,
       },
       prism: {
         theme: prismThemes.github,
