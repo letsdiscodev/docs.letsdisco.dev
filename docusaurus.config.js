@@ -8,8 +8,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Disco Documentation",
-  // favicon: 'img/favicon.ico',
+  title: "disco documentation",
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: "https://docs.letsdisco.dev",
