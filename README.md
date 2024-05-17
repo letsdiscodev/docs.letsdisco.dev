@@ -8,7 +8,7 @@ https://docs.letsdisco.dev/
 # first time only
 npm install
 
-#every time 
+# every time 
 npm run start
 ```
 
