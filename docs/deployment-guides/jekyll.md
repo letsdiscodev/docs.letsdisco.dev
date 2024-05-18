@@ -1,7 +1,3 @@
----
-sidebar_position: 7
----
-
 # Jekyll
 
 import DeploymentGuide from '@site/src/components/DeploymentGuide';

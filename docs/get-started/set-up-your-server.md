@@ -4,9 +4,8 @@ sidebar_position: 2
 
 # Set up your Server
 
-- You will need a server to deploy your projects to. It's preferrable to use a dedicated machine for disco.
-- You will also need a **dedicated domain name** for the server itself (in addition to any domains for the projects you will be deploying).
-- We recommend using a subdomain, for example `disco.yourdomain.com`. That dedicated subdomain should point to your server's IP address using an `A` record.
+- You will need a server (VPS, or a Raspberry Pi) to deploy your projects to. It's best to use a dedicated machine for disco.
+- You will also need a dedicated domain name for the server itself (in addition to any domains for the projects you will be deploying). We recommend using a subdomain, for example `server.yourdomain.com`
 
 
 ### Hetzner

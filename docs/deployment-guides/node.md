@@ -1,7 +1,3 @@
----
-sidebar_position: 10
----
-
 # Node
 
 import DeploymentGuide from '@site/src/components/DeploymentGuide';

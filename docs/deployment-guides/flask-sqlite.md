@@ -1,7 +1,3 @@
----
-sidebar_position: 4
----
-
 # Flask + SQLite
 
 import DeploymentGuide from '@site/src/components/DeploymentGuide';

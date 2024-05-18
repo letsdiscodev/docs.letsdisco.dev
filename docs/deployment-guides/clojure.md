@@ -1,7 +1,3 @@
----
-sidebar_position: 9
----
-
 # Clojure
 
 import DeploymentGuide from '@site/src/components/DeploymentGuide';

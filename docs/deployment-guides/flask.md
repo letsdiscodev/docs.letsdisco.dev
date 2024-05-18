@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Flask
 
 import DeploymentGuide from '@site/src/components/DeploymentGuide';

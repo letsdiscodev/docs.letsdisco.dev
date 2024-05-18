@@ -1,7 +1,3 @@
----
-sidebar_position: 6
----
-
 # Hugo
 
 import DeploymentGuide from '@site/src/components/DeploymentGuide';
