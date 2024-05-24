@@ -59,6 +59,36 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {
+          name: 'description',
+          content: 'disco documentation',
+        },
+        {
+          name: 'og:title',
+          content: 'disco documentation',
+        },
+        {
+          name: 'og:description',
+          content: 'disco documentation',
+        },
+        {
+          name: 'og:image',
+          content: 'img/disco-logo.svg',
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary',
+        },
+        {
+          name: 'twitter:site',
+          content: '@letsdiscodev',
+        },
+        {
+          name: 'twitter:creator',
+          content: '@letsdiscodev',
+        },
+      ],
       docs: {
         sidebar: {
             autoCollapseCategories: false,
