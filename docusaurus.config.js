@@ -74,7 +74,7 @@ const config = {
         },
         {
           name: 'og:image',
-          content: 'img/disco-logo.svg',
+          content: '/img/disco-opengraph.jpg',
         },
         {
           name: 'twitter:card',
