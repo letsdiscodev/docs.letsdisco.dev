@@ -89,7 +89,7 @@ Replace `USER` with the username you chose and `HOST` with the hostname you chos
   - Under "**Domain**", pick one of the domains that you are managing through Cloudflare.
   - Leave "**Path**" empty
   - Under "**Service Type**", pick "**HTTP**"
-  - Under "**URL**", paste `disco-server`
+  - Under "**URL**", type `disco-server`
   - The tunnel configuration should look like this:
     ![Cloudflare Tunnel](/img/host-from-home-with-a-pi/cloudflare-tunnel1.png)
 - Click "**Save tunnel**"
@@ -129,7 +129,7 @@ disco init USER@HOST.local \
   - Under "**Domain**", pick one of the domains that you are managing through Cloudflare.
   - Leave "**Path**" empty
   - Under "**Service Type**", pick "**HTTP**"
-  - Under "**URL**", paste `disco-server`
+  - Under "**URL**", type `disco-server`
   - Click "**Save hostname**"
 - You can now follow any disco Deployment Guide such as: [Flask](/deployment-guides/flask), [Node](/deployment-guides/node), etc. When running `disco projects:add ...`, as the domain for the project, use the domain you just set up in the Cloudflare Tunnel i.e. "blog.example.com"
   - Don't forget to run `disco github:apps:add` to connect your Github account to disco, so that you can deploy projects from Github.
