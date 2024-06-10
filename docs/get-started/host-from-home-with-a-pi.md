@@ -65,13 +65,13 @@ Replace `USER` with the username you chose and `HOST` with the hostname you chos
 - Create a free Cloudflare account at [cloudflare.com](https://cloudflare.com).
 - If your domain has already been purchased at another domain name registrar (such as PorkBun, Namecheap, etc.), follow [these instructions](https://developers.cloudflare.com/fundamentals/setup/manage-domains/add-site/) to add your domain to Cloudflare.
   - typically, the steps are to add the domain to your Cloudflare account, make sure to copy all of your existing records (i.e., A, CNAME, MX, TXT etc.) to Cloudflare, and then change your domain's nameservers to Cloudflare's nameservers. And then wait, typically an hour or sometimes more, until this information has propagated across the Internet.
-- If you don't have a domain yet, you can buy one through Cloudflare. Go to your Cloudflare dashboard, open the "Domain Registration" section on the left sidebar, click "Register Domains" and follow the steps
+- If you don't have a domain yet, you can buy one through Cloudflare. Go to your Cloudflare dashboard, open the "**Domain Registration**" section on the left sidebar, click "**Register Domains**" and follow the steps
 
 ### Cloudflare Tunnel Setup
 
-- In your Cloudflare dashboard, find "**Zero Trust**" in the left sidebar and click it
+- In your Cloudflare dashboard, click "**Zero Trust**" in the left sidebar
 - You will be asked to choose a team name. Choose any name you like.
-- You will be asked to pick a plan. Pick the Free plan.
+- You will be asked to pick a plan. Pick the **Free** plan.
 - Click "**Proceed to Payment**". A credit card will be required from you, however you will not be charged.
 - Click "**Purchase**". Once again, you will not be charged.
 - In the "**Zero Trust**" dashboard, on the left, click "**Networks**". You should now be in the "**Tunnels**" section.
