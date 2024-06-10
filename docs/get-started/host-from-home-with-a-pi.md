@@ -48,7 +48,7 @@ You won't have to change any firewall setting, you won't have to login to your r
   - you might be asked for your user's password to continue
   - wait for the process to complete, it will take a few minutes
 - Remove the microSD card from your computer and insert it into the Raspberry Pi.
-- Insert the Raspberry Pi into its case (if applicable), connect the fan from the case to the Pi (if applicable), and connect the power supply to the Pi.
+- Insert the Raspberry Pi into its case (if applicable), connect the fan from the case to the Pi (if applicable), connect the Ethernet cable into the Pi (if applicable), and connect the power supply to the Pi.
 - To check that the Pi is working, in your terminal, run:
 
 ```bash
@@ -57,14 +57,14 @@ ssh USER@HOST.local
 
 Replace `USER` with the username you chose and `HOST` with the hostname you chose. You will be asked for the password you chose.
 
-- You might be asked to accept the fingerprint of the server. Type "**yes**". If you're able to login into the Pi, this confirms that the Pi is online and that your username and password work. Close the ssh session by typing `exit` and pressing enter.
+- You might be asked to accept the fingerprint of the server. Type "**yes**". If you're able to log into the Pi, this confirms that the Pi is online and that your username and password work! Close the ssh session by typing `exit` and pressing enter.
 - *We're about a third of the way done! If you need to, take a break.*
 
 ### Cloudflare Setup
 
 - Create a free Cloudflare account at [cloudflare.com](https://cloudflare.com).
 - If your domain has already been purchased at another domain name registrar (such as PorkBun, Namecheap, etc.), follow [these instructions](https://developers.cloudflare.com/fundamentals/setup/manage-domains/add-site/) to add your domain to Cloudflare.
-  - typically, the steps are to add the domain to your Cloudflare account, make sure to copy all of your existing records (i.e., A, CNAME, MX, TXT etc.) to Cloudflare, and then change your domain's nameservers to Cloudflare's nameservers.
+  - typically, the steps are to add the domain to your Cloudflare account, make sure to copy all of your existing records (i.e., A, CNAME, MX, TXT etc.) to Cloudflare, and then change your domain's nameservers to Cloudflare's nameservers. And then wait, typically an hour or sometimes more, until this information has propagated across the Internet.
 - If you don't have a domain yet, you can buy one through Cloudflare. Go to your Cloudflare dashboard, open the "Domain Registration" section on the left sidebar, click "Register Domains" and follow the steps
 
 ### Cloudflare Tunnel Setup
