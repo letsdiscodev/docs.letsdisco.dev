@@ -1,3 +1,7 @@
+---
+sidebar_class_name: hidden
+---
+
 # Hugo
 
 import DeploymentGuide from '@site/src/components/DeploymentGuide';
