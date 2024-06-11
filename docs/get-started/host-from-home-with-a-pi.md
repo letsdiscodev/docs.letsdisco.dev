@@ -48,7 +48,7 @@ You won't have to change any firewall setting, you won't have to login to your r
   - you might be asked for your user's password to continue
   - wait for the process to complete, it will take a few minutes
 - Remove the microSD card from your computer and insert it into the Raspberry Pi.
-- Insert the Raspberry Pi into its case (if applicable), connect the fan from the case to the Pi (if applicable), and connect the power supply to the Pi.
+- Insert the Raspberry Pi into its case (if applicable), connect the fan from the case to the Pi (if applicable), connect the Ethernet cable into the Pi (if applicable), and connect the power supply to the Pi.
 - To check that the Pi is working, in your terminal, run:
 
 ```bash
@@ -57,21 +57,21 @@ ssh USER@HOST.local
 
 Replace `USER` with the username you chose and `HOST` with the hostname you chose. You will be asked for the password you chose.
 
-- You might be asked to accept the fingerprint of the server. Type "**yes**". If you're able to login into the Pi, this confirms that the Pi is online and that your username and password work. Close the ssh session by typing `exit` and pressing enter.
+- You might be asked to accept the fingerprint of the server. Type "**yes**". If you're able to log into the Pi, this confirms that the Pi is online and that your username and password work! Close the ssh session by typing `exit` and pressing enter.
 - *We're about a third of the way done! If you need to, take a break.*
 
 ### Cloudflare Setup
 
 - Create a free Cloudflare account at [cloudflare.com](https://cloudflare.com).
 - If your domain has already been purchased at another domain name registrar (such as PorkBun, Namecheap, etc.), follow [these instructions](https://developers.cloudflare.com/fundamentals/setup/manage-domains/add-site/) to add your domain to Cloudflare.
-  - typically, the steps are to add the domain to your Cloudflare account, make sure to copy all of your existing records (i.e., A, CNAME, MX, TXT etc.) to Cloudflare, and then change your domain's nameservers to Cloudflare's nameservers.
-- If you don't have a domain yet, you can buy one through Cloudflare. Go to your Cloudflare dashboard, open the "Domain Registration" section on the left sidebar, click "Register Domains" and follow the steps
+  - typically, the steps are to add the domain to your Cloudflare account, make sure to copy all of your existing records (i.e., A, CNAME, MX, TXT etc.) to Cloudflare, and then change your domain's nameservers to Cloudflare's nameservers. And then wait, typically an hour or sometimes more, until this information has propagated across the Internet.
+- If you don't have a domain yet, you can buy one through Cloudflare. Go to your Cloudflare dashboard, open the "**Domain Registration**" section on the left sidebar, click "**Register Domains**" and follow the steps
 
 ### Cloudflare Tunnel Setup
 
-- In your Cloudflare dashboard, find "**Zero Trust**" in the left sidebar and click it
+- In your Cloudflare dashboard, click "**Zero Trust**" in the left sidebar
 - You will be asked to choose a team name. Choose any name you like.
-- You will be asked to pick a plan. Pick the Free plan.
+- You will be asked to pick a plan. Pick the **Free** plan.
 - Click "**Proceed to Payment**". A credit card will be required from you, however you will not be charged.
 - Click "**Purchase**". Once again, you will not be charged.
 - In the "**Zero Trust**" dashboard, on the left, click "**Networks**". You should now be in the "**Tunnels**" section.
@@ -79,8 +79,8 @@ Replace `USER` with the username you chose and `HOST` with the hostname you chos
 - Make sure that the "**Cloudflared**" connector is selected. Click "**Next**"
 - Name your tunnel. For example, you could name it "homeserver". Click "**Save tunnel**"
 - Depending on your computer's operating system, you will be shown a snippet of code (either for Windows, Mac, Debian, etc.). Copy this snippet of code by clicking it.
-- In the example below, you would click the snippet beginning with `brew install cloudflared && ...`:
-  ![Cloudflare Tunnel](/img/host-from-home-with-a-pi/cloudflare-tunnel0.png)
+  - In the example below, you would click the snippet beginning with `brew install cloudflared && ...`:
+    ![Cloudflare Tunnel](/img/host-from-home-with-a-pi/cloudflare-tunnel0.png)
 - Paste the snippet of code into a text editor
 - Part of the snippet you pasted will contain a long string of text. This is the token that you will need to setup your server. Keep this token around for the next steps.
 - Scroll down on the page and click the "**Next**" button
@@ -89,7 +89,7 @@ Replace `USER` with the username you chose and `HOST` with the hostname you chos
   - Under "**Domain**", pick one of the domains that you are managing through Cloudflare.
   - Leave "**Path**" empty
   - Under "**Service Type**", pick "**HTTP**"
-  - Under "**URL**", paste `disco-server`
+  - Under "**URL**", type `disco-server`
   - The tunnel configuration should look like this:
     ![Cloudflare Tunnel](/img/host-from-home-with-a-pi/cloudflare-tunnel1.png)
 - Click "**Save tunnel**"
@@ -129,7 +129,7 @@ disco init USER@HOST.local \
   - Under "**Domain**", pick one of the domains that you are managing through Cloudflare.
   - Leave "**Path**" empty
   - Under "**Service Type**", pick "**HTTP**"
-  - Under "**URL**", paste `disco-server`
+  - Under "**URL**", type `disco-server`
   - Click "**Save hostname**"
 - You can now follow any disco Deployment Guide such as: [Flask](/deployment-guides/flask), [Node](/deployment-guides/node), etc. When running `disco projects:add ...`, as the domain for the project, use the domain you just set up in the Cloudflare Tunnel i.e. "blog.example.com"
   - Don't forget to run `disco github:apps:add` to connect your Github account to disco, so that you can deploy projects from Github.
