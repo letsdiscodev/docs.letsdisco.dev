@@ -14,6 +14,8 @@ curl https://cli-assets.letsdisco.dev/install.sh | sh
 
 The installation script above requires sudo.
 
+---
+
 ### Tarballs
 
 You can also download one of these tarballs and extract it yourself:

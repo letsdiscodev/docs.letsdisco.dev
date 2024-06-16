@@ -14,7 +14,7 @@ You won't have to change any firewall setting, you won't have to login to your r
 - A free Cloudflare account
   - You will need to enter a credit card during the setup, but you will not be charged
 - A domain name, either bought through Cloudflare or at a different registrar
-- A home internet connection
+- An internet connection (through your home router's wifi or Ethernet connection, or even using a phone's hotspot)
 
 ## Steps
 
