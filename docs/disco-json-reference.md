@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# disco.json reference
+# `disco.json` reference
 
 Projects deployed with `disco` typically have a `disco.json` file. You can see many examples of this file in the [example Flask app](/deployment-guides/flask-sqlite), [example Node app](/deployment-guides/node), [example Django app](/deployment-guides/django), etc.
 
