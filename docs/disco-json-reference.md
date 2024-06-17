@@ -4,17 +4,15 @@ sidebar_position: 5
 
 # disco.json reference
 
-Each project deployed with `disco` needs to have a `disco.json` file. You can see many examples of these files in the [example Flask app](/deployment-guides/flask-sqlite), [example Node app](/deployment-guides/node), [example Django app](/deployment-guides/django), etc.
-
-The documentation below goes through all of the available options and fields.
+Projects deployed with `disco` typically have a `disco.json` file. You can see many examples of this file in the [example Flask app](/deployment-guides/flask-sqlite), [example Node app](/deployment-guides/node), [example Django app](/deployment-guides/django), etc.
 
 *This is a work in progress.*
 
 ---
 
-### Complete structure
+### Example structure
 
-The complete structure of a `disco.json` file is demonstrated in the example below:
+The structure of a `disco.json` file is demonstrated in the example below:
 
 ```json
 {
@@ -58,7 +56,7 @@ The complete structure of a `disco.json` file is demonstrated in the example bel
 
 ### Default `disco.json` file
 
-It's strongly recommended to always have a `disco.json` file in your project, but if you don't, this is the default value that will be used -- i.e. one service called `web` running on port `8000`.
+We recommend that your projects always have a `disco.json` file, but if it doesn't, a default value will be used for it: one web-exposed service running on port `8000`. The default value of the `disco.json` file is thus:
 
 ```json
 {
