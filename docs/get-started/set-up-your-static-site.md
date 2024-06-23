@@ -38,7 +38,7 @@ public
 
 ### Create your disco.json
 
-The `disco.json` file tells Disco where to find your files.
+Create a file named `disco.json` at the root of your repository. The `disco.json` file tells Disco where to find your files.
 
 ```json
 {
@@ -71,12 +71,7 @@ And now, every time you `git push` new commits, Disco will deploy the site autom
 
 You can see the deployment output with:
 ```bash
-disco deploy:output --project first-app
-```
-
-And you can stream the logs of your app with:
-```bash
-disco logs --project first-app
+disco deploy:output --project first-site
 ```
 
 ### Security Considerations

@@ -10,7 +10,7 @@ In this docs you will learn the basics to get your existing app running on Disco
 
 At this point, you already have installed the CLI on your computer, installed Disco on your server, and you have added your Disco Github app with the permissions to your repository on Github.
 
-In this guide, you will have a `Dockerfile` to build the image of your app, and you'll have a `disco.json` file describing how the app should run on Disco.
+After this guide, you will have a `Dockerfile` to build the image of your app, and you'll have a `disco.json` file describing how the app should run on Disco.
 
 ### The app before Disco
 
@@ -75,7 +75,7 @@ See [notes below](#optimizing-the-dockerfile) for some optimizations we can make
 
 ### Create your disco.json
 
-The `disco.json` file tells Disco how to run your app.
+Create a file named `disco.json` at the root of your repository. The `disco.json` file tells Disco how to run your app.
 
 One note is that services have to be accessible from the outside. See [Externally Visible Server](https://flask.palletsprojects.com/en/3.0.x/quickstart/#public-server) in Flask's docs. While the flag `--host=0.0.0.0` is Flask specific, the concept applies to most apps: it may bind to `127.0.0.1` (`localhost`) by default, meaning only requests coming from "inside" would be able to reach the app. This is a great default for developping on your computer, but to deploy your application, it needs to be accessible from the outside, so that the reverse proxy in front of your app can talk to it.
 
