@@ -36,7 +36,7 @@ postgresql://t43ugkmyi1fi8qok:mRp0CMSaN13FPAYz@postgres-instance-nuclear-rabbit-
 
 ## In More Details
 
-### Installing
+### Installing the Addon on your Server
 You can install the addon with
 
 ```bash
