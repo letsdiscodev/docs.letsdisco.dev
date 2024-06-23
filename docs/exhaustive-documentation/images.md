@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Images
 
-Each service (except for the `type` `"static"`) uses a Docker image.
+Each service uses a Docker image.
 
 ## Specifying a Dockerfile
 
