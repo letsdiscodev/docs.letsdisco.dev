@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Set up your App
+# Set up your Static Site Generator (SSG)
 
 In this docs you will learn the basics to get your existing static site generator site building on Disco and being served by Disco. If you have a static site or running apps, refer to these sections instead.
 
