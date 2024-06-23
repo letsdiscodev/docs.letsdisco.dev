@@ -22,9 +22,9 @@ You can specify crons in your `disco.json` file:
 }
 ```
 
-## Basic Examples
+## Useful Examples
 
-Here are a few basic examples of `crontab` notation to get you started:
+Here are a few useful examples of `crontab` notation to get you started:
 ```json
 {
     "version": "1.0",
