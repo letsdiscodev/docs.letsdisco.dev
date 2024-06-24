@@ -6,6 +6,8 @@ sidebar_position: 2
 
 You will need a server (VPS, or a Raspberry Pi) to deploy your projects to. It's best to use a dedicated machine for disco. If you don't have one, [obtain one](/misc/get-a-server) and come back here.
 
+It should run the latest Ubuntu Server LTS. Currently Ubuntu Server 24.04.
+
 You will also need a dedicated domain name for the server itself (in addition to any domains for the projects you will be deploying). We recommend using a subdomain, for example `server.yourdomain.com`.
 
 ## Step One: disco init
