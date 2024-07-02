@@ -146,6 +146,11 @@ const config = {
           //   label: 'Tutorial',
           // },
           {
+            label: "GitHub",
+            href: "https://github.com/letsdiscodev/",
+            position: "right",
+          },
+          {
             label: "Discord",
             href: "https://discord.gg/7J4vb5uUwU",
             position: "right",
@@ -168,12 +173,12 @@ const config = {
             // title: "Community",
             items: [
               {
-                label: "Discord",
-                href: "https://discord.gg/7J4vb5uUwU",
-              },
-              {
                 label: "GitHub",
                 href: "https://github.com/letsdiscodev/",
+              },
+              {
+                label: "Discord",
+                href: "https://discord.gg/7J4vb5uUwU",
               },
               {
                 label: "letsdisco.dev",
