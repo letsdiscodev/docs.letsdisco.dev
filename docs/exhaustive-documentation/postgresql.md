@@ -20,15 +20,15 @@ disco postgres:instances:add
 # ... shows deployment output
 disco postgres:instances:list
 # ...shows the instance name, e.g.: nuclear-rabbit
-disco postgres:database:add --instance nuclear-rabbit
+disco postgres:databases:add --instance nuclear-rabbit
 # ... shows the database name, e.g.: ms6y0semmct194hs
-disco postgres:database:attach \
+disco postgres:databases:attach \
     --instance nuclear-rabbit \
     --database ms6y0semmct194hs \
     --project my-project
 ```
 
-The last command (`postgres:database:attach`) will add an environment variable to `my-project` named `DATABASE_URL` that looks something like this:
+The last command (`postgres:databases:attach`) will add an environment variable to `my-project` named `DATABASE_URL` that looks something like this:
 
 ```
 postgresql://t43ugkmyi1fi8qok:mRp0CMSaN13FPAYz@postgres-instance-nuclear-rabbit-postgres/ms6y0semmct194hs
@@ -68,12 +68,12 @@ This will output `nuclear-rabbit`.
 Once you have added an instance, you can databases to it.
 
 ```bash
-disco postgres:database:add --instance nuclear-rabbit
+disco postgres:databases:add --instance nuclear-rabbit
 ```
 
 It should output the name of the database, like `ms6y0semmct194hs`. You can retrieve the list of databases later with
 ```bash
-disco postgres:database:list --instance nuclear-rabbit
+disco postgres:databases:list --instance nuclear-rabbit
 ```
 
 ### Attaching a Database to a Project
@@ -83,7 +83,7 @@ So far, you installed the addon, added a Postgres instance and created a databas
 You can attach it to your project with
 
 ```bash
-disco postgres:database:attach \
+disco postgres:databases:attach \
     --instance nuclear-rabbit \
     --database ms6y0semmct194hs \
     --project my-project
@@ -104,7 +104,7 @@ disco env:get DATABASE_URL --project my-project
 You can choose another environmnent variable by passing `--env-var VAR_NAME`:
 
 ```bash
-disco postgres:database:attach \
+disco postgres:databases:attach \
     --instance nuclear-rabbit \
     --database ms6y0semmct194hs \
     --project my-project \
