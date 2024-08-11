@@ -1,6 +1,6 @@
 {
-  "label": "Misc",
-  "position": 5,
-  "collapsible": true,
-  "collapsed": true,
+    "label": "Misc",
+    "position": 5,
+    "collapsible": false,
+    "collapsed": false
 }
