@@ -1,6 +1,6 @@
 # Worker Processes
 
-In your `disco.json` file, you can define many services. The one that has the name `web` will be exposed to the internet by Disco. The other ones will just run.
+In your `disco.json` file, you can define many services. The one that has the name `web` will be exposed to the internet by disco. The other ones will just run.
 
 ```json
 {

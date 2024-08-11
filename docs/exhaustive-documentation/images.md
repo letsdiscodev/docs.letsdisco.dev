@@ -43,7 +43,7 @@ You can avoid talking about images in your `disco.json` file by relying on the d
 
 This `disco.json` above uses the defaults. More on this below.
 
-When you don't specify the image to use for a service, Disco will default to the image named `default`.
+When you don't specify the image to use for a service, disco will default to the image named `default`.
 
 Those two `disco.json` are equivalent, defining `"image"` or not in the definition of `"web"`:
 
@@ -84,7 +84,7 @@ and
 }
 ```
 
-Also, when not defining the `default` image, Disco will assume the default value shown above. That is, the `Dockerfile` at the root of the repository, the build context as well. Meaning that this third `disco.json` is also equivalent:
+Also, when not defining the `default` image, disco will assume the default value shown above. That is, the `Dockerfile` at the root of the repository, the build context as well. Meaning that this third `disco.json` is also equivalent:
 ```json
 {
     "version": "1.0",
@@ -175,7 +175,7 @@ or another exmaple, if the Dockerfile is in a sub-directory, but should be built
 
 ## Using Publicly Downloadable Images
 
-If the name of the image to use is not defined in `images`, Disco will see if it can download it.
+If the name of the image to use is not defined in `images`, disco will see if it can download it.
 
 ```json
 {

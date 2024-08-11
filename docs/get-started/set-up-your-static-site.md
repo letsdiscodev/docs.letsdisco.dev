@@ -4,15 +4,15 @@ sidebar_position: 5
 
 # Set up your Static Site
 
-In this docs you will learn the basics to get your existing static site being served by Disco. If you have static files ready to serve, you're at the right place. If you're looking for static site generators or running apps, have a look at their sections in the docs.
+In this docs you will learn the basics to get your existing static site being served by disco. If you have static files ready to serve, you're at the right place. If you're looking for static site generators or running apps, have a look at their sections in the docs.
 
 ## Overview
 
-At this point, you already have installed the CLI on your computer, installed Disco on your server, and you have added your Disco Github app with the permissions to your repository on Github.
+At this point, you already have installed the CLI on your computer, installed disco on your server, and you have added your disco Github app with the permissions to your repository on Github.
 
-You already have static files to serve. You just need to tell Disco where to find them in your repository, by using a `disco.json` file.
+You already have static files to serve. You just need to tell disco where to find them in your repository, by using a `disco.json` file.
 
-### The site before Disco
+### The site before disco
 
 Let's say you have a folder called `public` that contains an HTML file `index.html`.
 ```
@@ -38,7 +38,7 @@ public
 
 ### Create your disco.json
 
-Create a file named `disco.json` at the root of your repository. The `disco.json` file tells Disco where to find your files.
+Create a file named `disco.json` at the root of your repository. The `disco.json` file tells disco where to find your files.
 
 ```json
 {
@@ -52,13 +52,13 @@ Create a file named `disco.json` at the root of your repository. The `disco.json
 }
 ```
 
-The name `web` is a magic name. When Disco sees it, it knows that it's the one to use to expose to the internet, create a TLS certificate for HTTPS, etc.
+The name `web` is a magic name. When disco sees it, it knows that it's the one to use to expose to the internet, create a TLS certificate for HTTPS, etc.
 
 `publicPath` is relative to the root of your repository. In our example, the directory `public` sits at the root of the repository.
 
 ### That's it!
 
-Your site is now ready to be deployed on Disco. You can use the CLI to add the project.
+Your site is now ready to be deployed on disco. You can use the CLI to add the project.
 
 ```bash
 disco projects:add \
@@ -67,7 +67,7 @@ disco projects:add \
     --domain first-site.example.com
 ```
 
-And now, every time you `git push` new commits, Disco will deploy the site automatically.
+And now, every time you `git push` new commits, disco will deploy the site automatically.
 
 You can see the deployment output with:
 ```bash

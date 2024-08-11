@@ -111,7 +111,7 @@ You can attach many databases to a single project. And you can attach the same d
 
 ### Remote Access
 
-As you saw in the `DATABASE_URL` value, the hostname was `postgres-instance-nuclear-rabbit-postgres`. It's not exposed to the internet. It's only accessible to the projects running on your Disco installation.
+As you saw in the `DATABASE_URL` value, the hostname was `postgres-instance-nuclear-rabbit-postgres`. It's not exposed to the internet. It's only accessible to the projects running on your disco installation.
 
 If you want to access it remotely, from your laptop for example, you can create a temporary tunnel.
 

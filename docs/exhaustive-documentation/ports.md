@@ -2,7 +2,7 @@
 
 ## Web
 
-When deploying a web application, the way to have the web traffic served through Disco's reverse proxy is to specify the port in your `disco.json`.
+When deploying a web application, the way to have the web traffic served through disco's reverse proxy is to specify the port in your `disco.json`.
 
 ```json
 {
@@ -16,9 +16,9 @@ When deploying a web application, the way to have the web traffic served through
 }
 ```
 
-That way, requests come in to your server on port 443 (for https) and Disco's reverse proxy will forward the request to your app on port 8080.
+That way, requests come in to your server on port 443 (for https) and disco's reverse proxy will forward the request to your app on port 8080.
 
-Also, note that the name `web` for the service is important. Disco will use that service to expose to the internet. You can't specify `port` on a service not named `web`.
+Also, note that the name `web` for the service is important. disco will use that service to expose to the internet. You can't specify `port` on a service not named `web`.
 
 ## Internal Communication Between Services
 
@@ -94,4 +94,4 @@ In the case where you would like to expose a port externally, bypassing the reve
 
 In this case, the container's port `11000` will be exposed on the server directly as port `12000`. Also, the protocol defined is `udp`, or `tcp`.
 
-Since it does not go through the reverse proxy, Disco will not provide a TLS certificate for HTTPS.
+Since it does not go through the reverse proxy, disco will not provide a TLS certificate for HTTPS.

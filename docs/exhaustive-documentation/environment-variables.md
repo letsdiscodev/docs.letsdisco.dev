@@ -41,7 +41,7 @@ console.log(`Hello ${process.env.VAR_NAME}`)
 
 ## Using Environment Variables When Building Images
 
-When building Docker images, we need to be careful to avoid including the variables in the images. Disco uses the recommended way to expose environment variables without baking them into the images.
+When building Docker images, we need to be careful to avoid including the variables in the images. disco uses the recommended way to expose environment variables without baking them into the images.
 
 See Docker documentation about [Build Secrets](https://docs.docker.com/build/building/secrets/) for more info.
 
@@ -86,7 +86,7 @@ The [Docker documentation](https://docs.docker.com/build/building/secrets/#targe
 RUN --mount=type=secret,id=aws,target=/root/.aws/credentials \
     aws s3 cp ...
 ```
-We can adapt it to Disco's environment variables like
+We can adapt it to disco's environment variables like
 ```bash
 disco env:set --projecct my-project AWS_CREDENTIALS='...'
 ```

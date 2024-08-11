@@ -54,4 +54,4 @@ Volumes are scoped per project. If you use the same volume name for 2 different 
 
 ## Scaling Considerations
 
-When running Disco with multiple servers (nodes in a swarm), usually, services will be spread on all servers automatically to spread the load. However, when using volumes, Disco will force the services to run on the main node and the volumes will be created on the hard drive of the main node. In other words, services that use volumes will not scale horiztonally.
+When running disco with multiple servers (nodes in a swarm), usually, services will be spread on all servers automatically to spread the load. However, when using volumes, disco will force the services to run on the main node and the volumes will be created on the hard drive of the main node. In other words, services that use volumes will not scale horiztonally.

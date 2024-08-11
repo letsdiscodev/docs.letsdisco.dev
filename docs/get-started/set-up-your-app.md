@@ -4,15 +4,15 @@ sidebar_position: 4
 
 # Set up your App
 
-In this docs you will learn the basics to get your existing app running on Disco. If you have a static site or a static site generator, refer to these sections instead.
+In this docs you will learn the basics to get your existing app running on disco. If you have a static site or a static site generator, refer to these sections instead.
 
 ## Overview
 
-At this point, you already have installed the CLI on your computer, installed Disco on your server, and you have added your Disco Github app with the permissions to your repository on Github.
+At this point, you already have installed the CLI on your computer, installed disco on your server, and you have added your disco Github app with the permissions to your repository on Github.
 
-After this guide, you will have a `Dockerfile` to build the image of your app, and you'll have a `disco.json` file describing how the app should run on Disco.
+After this guide, you will have a `Dockerfile` to build the image of your app, and you'll have a `disco.json` file describing how the app should run on disco.
 
-### The app before Disco
+### The app before disco
 
 Let's use a very basic Flask app so that we have something to work with.
 
@@ -60,7 +60,7 @@ $ flask --app hello run
 
 ### Create your Dockerfile
 
-Apps on Disco run inside Docker containers. We need a Dockerfile to build the image that will be used by those containers. If you've never worked with Docker or `Dockerfile`, the general idea is that the `Dockerfile` will build everything needed to run the app, so that we can use it later to execute the app. You can see it as a `makefile` to build binaries that you'll later use when you want to run the app.
+Apps on disco run inside Docker containers. We need a Dockerfile to build the image that will be used by those containers. If you've never worked with Docker or `Dockerfile`, the general idea is that the `Dockerfile` will build everything needed to run the app, so that we can use it later to execute the app. You can see it as a `makefile` to build binaries that you'll later use when you want to run the app.
 
 For this example, in Python, we'll use the official Python image from Docker Hub. Just create a file named `Dockerfile` at the root of your repository.
 
@@ -75,7 +75,7 @@ See [notes below](#optimizing-the-dockerfile) for some optimizations we can make
 
 ### Create your disco.json
 
-Create a file named `disco.json` at the root of your repository. The `disco.json` file tells Disco how to run your app.
+Create a file named `disco.json` at the root of your repository. The `disco.json` file tells disco how to run your app.
 
 One note is that services have to be accessible from the outside. See [Externally Visible Server](https://flask.palletsprojects.com/en/3.0.x/quickstart/#public-server) in Flask's docs. While the flag `--host=0.0.0.0` is Flask specific, the concept applies to most apps: it may bind to `127.0.0.1` (`localhost`) by default, meaning only requests coming from "inside" would be able to reach the app. This is a great default for developping on your computer, but to deploy your application, it needs to be accessible from the outside, so that the reverse proxy in front of your app can talk to it.
 
@@ -91,11 +91,11 @@ One note is that services have to be accessible from the outside. See [Externall
 }
 ```
 
-The name `web` is a magic name. When Disco sees it, it knows that it's the one to use to expose to the internet, create a TLS certificate for HTTPS, etc.
+The name `web` is a magic name. When disco sees it, it knows that it's the one to use to expose to the internet, create a TLS certificate for HTTPS, etc.
 
 ### That's it!
 
-Your app is now ready to be deployed on Disco. You can use the CLI to add the project.
+Your app is now ready to be deployed on disco. You can use the CLI to add the project.
 
 ```bash
 disco projects:add \
@@ -104,7 +104,7 @@ disco projects:add \
     --domain first-app.example.com
 ```
 
-And now, every time you `git push` new commits, Disco will deploy the app automatically.
+And now, every time you `git push` new commits, disco will deploy the app automatically.
 
 You can see the deployment output with:
 ```bash

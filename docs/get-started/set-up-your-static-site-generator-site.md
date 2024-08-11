@@ -4,15 +4,15 @@ sidebar_position: 6
 
 # Set up your Static Site Generator (SSG)
 
-In this docs you will learn the basics to get your existing static site generator site building on Disco and being served by Disco. If you have a static site or running apps, refer to these sections instead.
+In this docs you will learn the basics to get your existing static site generator site building on disco and being served by disco. If you have a static site or running apps, refer to these sections instead.
 
 ## Overview
 
-At this point, you already have installed the CLI on your computer, installed Disco on your server, and you have added your Disco Github app with the permissions to your repository on Github.
+At this point, you already have installed the CLI on your computer, installed disco on your server, and you have added your disco Github app with the permissions to your repository on Github.
 
-In this guide, you will have a `Dockerfile` to build your site, and you'll have a `disco.json` file telling Disco where to find the files to be served within your image.
+In this guide, you will have a `Dockerfile` to build your site, and you'll have a `disco.json` file telling disco where to find the files to be served within your image.
 
-### The site before Disco
+### The site before disco
 
 Let's use a very barebone home made site generator as an example.
 
@@ -72,7 +72,7 @@ python generate.py
 
 ### Create your Dockerfile
 
-Static sites generator on Disco are built using a `Dockerfile`. 
+Static sites generator on disco are built using a `Dockerfile`. 
 
 For this example, in Python, we'll use the official Python image from Docker Hub. Just create a file named `Dockerfile` at the root of your repository.
 
@@ -88,7 +88,7 @@ See [notes below](#optimizing-the-dockerfile) for some optimizations we can make
 
 ### Create your disco.json
 
-Create a file named `disco.json` at the root of your repository. The `disco.json` file tells Disco where to find the files to serve inside the Docker image we just built with the `Dockerfile` above.
+Create a file named `disco.json` at the root of your repository. The `disco.json` file tells disco where to find the files to serve inside the Docker image we just built with the `Dockerfile` above.
 
 ```json
 {
@@ -101,14 +101,14 @@ Create a file named `disco.json` at the root of your repository. The `disco.json
     }
 }```
 
-The name `web` is a magic name. When Disco sees it, it knows that it's the one to use to expose to the internet, create a TLS certificate for HTTPS, etc.
+The name `web` is a magic name. When disco sees it, it knows that it's the one to use to expose to the internet, create a TLS certificate for HTTPS, etc.
 
 `publicPath` is relative to the `WOKRDIR` in your `Dockerfile`. In our example, the directory `dist` actually means `/app/dist` in our Docker image.
 
 
 ### That's it!
 
-Your site is now ready to be deployed on Disco. You can use the CLI to add the project.
+Your site is now ready to be deployed on disco. You can use the CLI to add the project.
 
 ```bash
 disco projects:add \
@@ -117,7 +117,7 @@ disco projects:add \
     --domain first-site.example.com
 ```
 
-And now, every time you `git push` new commits, Disco will deploy the site automatically.
+And now, every time you `git push` new commits, disco will deploy the site automatically.
 
 You can see the deployment output with:
 ```bash
