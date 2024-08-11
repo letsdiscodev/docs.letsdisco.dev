@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Crons
 
 You can specify crons in your `disco.json` file:

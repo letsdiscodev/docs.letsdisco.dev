@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Environment Variables
 
 To set environment variables for you project, you can use the CLI commands:

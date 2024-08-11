@@ -1,14 +1,10 @@
----
-sidebar_position: 4
----
+# PostgreSQL (Advanced)
 
-# PostgreSQL
+## Introduction
 
-Disco provides a "good enough" Postgres addon.
+disco provides a "good enough" Postgres addon.
 
-## Good Enough
-
-The Postgres addon is a great way to quickly have access to Postgres when Postgres is not mission critical to your system. If you need any non-basic features, like replication, automatic failover, monitoring, automatic backups and restore, etc. you should use a more serious solution, like a managed Postgres.
+This addon is a great way to quickly setup a database when Postgres is not mission critical to your system. If you need any non-basic features, like replication, automatic failover, monitoring, automatic backups and restore, etc. you should consider using a managed Postgres provider, such as [Neon](https://neon.tech/) or [Supabase](https://supabase.com/).
 
 ## TL;DR
 

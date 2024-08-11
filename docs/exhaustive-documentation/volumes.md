@@ -1,7 +1,3 @@
----
-sidebar_position: 5
----
-
 # Volumes
 
 In some cases, you may need to store data that outlives a container lifetime. You can achieve this using volumes.

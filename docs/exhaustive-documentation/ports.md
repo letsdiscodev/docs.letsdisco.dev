@@ -1,8 +1,4 @@
----
-sidebar_position: 7
----
-
-# Ports
+# Network Ports
 
 ## Web
 
