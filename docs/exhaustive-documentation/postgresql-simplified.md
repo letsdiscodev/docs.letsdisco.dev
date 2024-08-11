@@ -1,7 +1,5 @@
 # PostgreSQL
 
-disco provides a "good enough" Postgres addon.
-
 ## Introduction
 
 disco provides a "good enough" Postgres addon.
