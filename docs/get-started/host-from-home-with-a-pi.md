@@ -97,13 +97,14 @@ Replace `USER` with the username you chose and `HOST` with the hostname you chos
 
 ### disco Setup
 
-- You now have the Raspberry Pi and Cloudflare set up. The next step is to install disco on the Raspberry Pi.
-- On your computer, install the disco CLI by following [these steps](/get-started/install-the-cli).
+- You now have the Raspberry Pi and Cloudflare set up!
+- We will now use the CLI to install the disco daemon on the Raspberry Pi. To do so...
+- **On your computer** (not on the Pi!), install the disco CLI by following [these steps](/get-started/install-the-cli).
   - The simplest and fastest way is to run `curl https://cli-assets.letsdisco.dev/install.sh | sh`
-- Once you have the disco CLI installed, run:
+- Once you have the disco CLI installed on **your** computer, run (again, on your computer):
 
 ```bash
-disco init USER@HOST.local \
+disco init USER@HOST \
     --host TUNNELDOMAIN \
     --cloudflare-tunnel TOKEN
 ```
@@ -111,9 +112,11 @@ disco init USER@HOST.local \
 - Replacing:
   - `USER` with the username you chose for the Raspberry Pi
   - `HOST` with the hostname you chose for the Raspberry Pi
+    - this will be something like `myhomepi.local`
   - `TUNNELDOMAIN` with the subdomain you set up in the Cloudflare tunnel
+    - this will be something like `mypi.mydomain.com`
   - `TOKEN` with the token you copied from the Cloudflare tunnel setup
-- disco will ask you for your Raspberry Pi password. Enter it.
+- disco will ask you for your Raspberry Pi account password. Enter it.
 - If you see an error that's about "Failed to run command over SSH" and it includes the text "It is held by process 1990 (unattended-upgr)", this is because the Raspberry Pi is currently updating. Wait about 5-10 minutes and try again.
 
 ### Deploying projects
