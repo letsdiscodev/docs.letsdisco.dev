@@ -34,3 +34,10 @@ It will open a browser with the flow to create a Github app that will be connect
 Give it a name that's meaningful to you, about this server, or leave the generated name. You can change it later.
 
 And then, you need to select which repositories you want to give it access to. You can change this later as well.
+
+If your repo exists in an Organization account you must pass in the organization name to the disco command
+
+Run
+```bash
+disco github:apps:add --organization Big-Tech-Corp
+```
