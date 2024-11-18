@@ -99,7 +99,8 @@ Create a file named `disco.json` at the root of your repository. The `disco.json
             "publicPath": "dist"
         }
     }
-}```
+}
+```
 
 The name `web` is a magic name. When disco sees it, it knows that it's the one to use to expose to the internet, create a TLS certificate for HTTPS, etc.
 
