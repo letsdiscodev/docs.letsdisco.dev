@@ -14,7 +14,6 @@ You will also need a dedicated domain name for the server itself (in addition to
 
 First, you need to install disco on your server. For this, you run `disco init` and you pass it the SSH `user@DOMAIN` to use for disco.
 
-
 For example, if the user is `root` and the domain is `disco.example.com`
 ```bash
 disco init root@disco.example.com
@@ -34,3 +33,10 @@ It will open a browser with the flow to create a Github app that will be connect
 Give it a name that's meaningful to you, about this server, or leave the generated name. You can change it later.
 
 And then, you need to select which repositories you want to give it access to. You can change this later as well.
+
+If your repo exists within a GitHub organization account, you must pass in the organization username to the disco command:
+
+Run
+```bash
+disco github:apps:add --organization bigtechcorp
+```

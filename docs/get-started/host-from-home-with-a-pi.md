@@ -78,10 +78,10 @@ Replace `USER` with the username you chose and `HOST` with the hostname you chos
 - Click "**Add a tunnel**"
 - Make sure that the "**Cloudflared**" connector is selected. Click "**Next**"
 - Name your tunnel. For example, you could name it "homeserver". Click "**Save tunnel**"
-- Depending on your computer's operating system, you will be shown a snippet of code (either for Windows, Mac, Debian, etc.). Copy this snippet of code by clicking it.
+- Depending on your computer's operating system, you will be shown a snippet of code (either for Windows, Mac, Debian, etc.). **Don't do what Cloudflare tells you to do here.** Instead, copy this snippet of code by clicking it.
   - In the example below, you would click the snippet beginning with `brew install cloudflared && ...`:
     ![Cloudflare Tunnel](/img/host-from-home-with-a-pi/cloudflare-tunnel0.png)
-- Paste the snippet of code into a text editor
+- Paste the snippet of code into a text editor (again, instead of running what cloudflare wants you to run... disco will take care of that part automatically, later).
 - Part of the snippet you pasted will contain a long string of text. This is the token that you will need to setup your server. Keep this token around for the next steps.
 - Scroll down on the page and click the "**Next**" button
 - You will see a section called "Add public hostname for ..."
