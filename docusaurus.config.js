@@ -155,6 +155,11 @@ const config = {
             href: "https://discord.gg/7J4vb5uUwU",
             position: "right",
           },
+          {
+            label: "Disco home",
+            href: "https://disco.cloud",
+            position: "right",
+          },
         ],
       },
       footer: {
@@ -181,8 +186,8 @@ const config = {
                 href: "https://discord.gg/7J4vb5uUwU",
               },
               {
-                label: "letsdisco.dev",
-                href: "https://letsdisco.dev/",
+                label: "Disco home",
+                href: "https://disco.cloud",
               },
             ],
           },
