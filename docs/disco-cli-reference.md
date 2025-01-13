@@ -8,9 +8,12 @@ sidebar_position: 5
 <!-- commands -->
 * [`disco apikeys:list`](#disco-apikeyslist)
 * [`disco apikeys:remove [PUBLICKEY]`](#disco-apikeysremove-publickey)
+* [`disco autocomplete [SHELL]`](#disco-autocomplete-shell)
 * [`disco deploy`](#disco-deploy)
+* [`disco deploy:cancel`](#disco-deploycancel)
 * [`disco deploy:list`](#disco-deploylist)
 * [`disco deploy:output`](#disco-deployoutput)
+* [`disco discos:list`](#disco-discoslist)
 * [`disco domains:add DOMAIN`](#disco-domainsadd-domain)
 * [`disco domains:list`](#disco-domainslist)
 * [`disco domains:remove DOMAIN`](#disco-domainsremove-domain)
@@ -45,6 +48,7 @@ sidebar_position: 5
 * [`disco postgres:addon:install`](#disco-postgresaddoninstall)
 * [`disco postgres:addon:remove`](#disco-postgresaddonremove)
 * [`disco postgres:addon:update`](#disco-postgresaddonupdate)
+* [`disco postgres:create`](#disco-postgrescreate)
 * [`disco postgres:databases:add`](#disco-postgresdatabasesadd)
 * [`disco postgres:databases:attach`](#disco-postgresdatabasesattach)
 * [`disco postgres:databases:detach`](#disco-postgresdatabasesdetach)
@@ -53,12 +57,12 @@ sidebar_position: 5
 * [`disco postgres:instances:add`](#disco-postgresinstancesadd)
 * [`disco postgres:instances:list`](#disco-postgresinstanceslist)
 * [`disco postgres:instances:remove`](#disco-postgresinstancesremove)
+* [`disco postgres:tunnel`](#disco-postgrestunnel)
 * [`disco projects:add`](#disco-projectsadd)
 * [`disco projects:list`](#disco-projectslist)
 * [`disco projects:move`](#disco-projectsmove)
 * [`disco projects:remove PROJECT`](#disco-projectsremove-project)
 * [`disco run [COMMAND]`](#disco-run-command)
-* [`disco runcommand [PROJECT] [COMMAND] [ARGS]`](#disco-runcommand-project-command-args)
 * [`disco scale SERVICES`](#disco-scale-services)
 * [`disco syslog:add [SYSLOGDESTINATION]`](#disco-syslogadd-syslogdestination)
 * [`disco syslog:list`](#disco-sysloglist)
@@ -111,6 +115,37 @@ EXAMPLES
 
 _See code: [src/commands/apikeys/remove.ts](https://github.com/letsdiscodev/cli/blob/main/src/commands/apikeys/remove.ts)_
 
+## `disco autocomplete [SHELL]`
+
+Display autocomplete installation instructions.
+
+```
+USAGE
+  $ disco autocomplete [SHELL] [-r]
+
+ARGUMENTS
+  SHELL  (zsh|bash|powershell) Shell type
+
+FLAGS
+  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
+
+DESCRIPTION
+  Display autocomplete installation instructions.
+
+EXAMPLES
+  $ disco autocomplete
+
+  $ disco autocomplete bash
+
+  $ disco autocomplete zsh
+
+  $ disco autocomplete powershell
+
+  $ disco autocomplete --refresh-cache
+```
+
+_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/main/src/commands/autocomplete/index.ts)_
+
 ## `disco deploy`
 
 deploy a project, a specific commit or a disco.json file
@@ -135,6 +170,30 @@ EXAMPLES
 ```
 
 _See code: [src/commands/deploy.ts](https://github.com/letsdiscodev/cli/blob/main/src/commands/deploy.ts)_
+
+## `disco deploy:cancel`
+
+cancel a deployment for a project. if a deployment number is not specified, the latest deployment will be cancelled
+
+```
+USAGE
+  $ disco deploy:cancel --project <value> [--deployment <value>] [--disco <value>]
+
+FLAGS
+  --deployment=<value>
+  --disco=<value>
+  --project=<value>     (required)
+
+DESCRIPTION
+  cancel a deployment for a project. if a deployment number is not specified, the latest deployment will be cancelled
+
+EXAMPLES
+  $ disco deploy:cancel --project mysite
+
+  $ disco deploy:cancel --project mysite --deployment 4
+```
+
+_See code: [src/commands/deploy/cancel.ts](https://github.com/letsdiscodev/cli/blob/main/src/commands/deploy/cancel.ts)_
 
 ## `disco deploy:list`
 
@@ -180,6 +239,23 @@ EXAMPLES
 ```
 
 _See code: [src/commands/deploy/output.ts](https://github.com/letsdiscodev/cli/blob/main/src/commands/deploy/output.ts)_
+
+## `disco discos:list`
+
+list the discos
+
+```
+USAGE
+  $ disco discos:list
+
+DESCRIPTION
+  list the discos
+
+EXAMPLES
+  $ disco discos:list
+```
+
+_See code: [src/commands/discos/list.ts](https://github.com/letsdiscodev/cli/blob/main/src/commands/discos/list.ts)_
 
 ## `disco domains:add DOMAIN`
 
@@ -476,16 +552,18 @@ initializes a new server
 ```
 USAGE
   $ disco init SSHSTRING [--version <value>] [--verbose] [--host <value>] [--local-image <value>]
-    [--advertise-addr <value>] [--cloudflare-tunnel <value>]
+    [--advertise-addr <value>] [--cloudflare-tunnel <value>] [-i <value>]
 
 FLAGS
-  --advertise-addr=<value>     fixed IP address used to add nodes. defaults to resolving domain name of ssh connection
-  --cloudflare-tunnel=<value>  Cloudflare Tunnel token, if you want to run Disco behind a Cloudflare tunnel
-  --host=<value>               hostname to use, when installing using an internal IP for the SSH connection, e.g. disco
-                               init root@10.1.2.3 --host disco.example.com
-  --local-image=<value>        local Docker image to upload and use (mostly for Disco development)
-  --verbose                    show extra output
-  --version=<value>            [default: latest] version of disco daemon to install
+  -i, --identity-file=<value>      SSH key to use for authentication
+      --advertise-addr=<value>     fixed IP address used to add nodes. defaults to resolving domain name of ssh
+                                   connection
+      --cloudflare-tunnel=<value>  Cloudflare Tunnel token, if you want to run disco behind a Cloudflare tunnel
+      --host=<value>               hostname to use, when installing using an internal IP for the SSH connection, e.g.
+                                   disco init root@10.1.2.3 --host disco.example.com
+      --local-image=<value>        local Docker image to upload and use (mostly for Disco development)
+      --verbose                    show extra output
+      --version=<value>            [default: latest] version of disco daemon to install
 
 DESCRIPTION
   initializes a new server
@@ -1001,6 +1079,28 @@ EXAMPLES
 
 _See code: [src/commands/postgres/addon/update.ts](https://github.com/letsdiscodev/cli/blob/main/src/commands/postgres/addon/update.ts)_
 
+## `disco postgres:create`
+
+create a database for a project, ensuring addon and instance are installed
+
+```
+USAGE
+  $ disco postgres:create --project <value> --env-var <value> [--disco <value>]
+
+FLAGS
+  --disco=<value>
+  --env-var=<value>  (required) [default: DATABASE_URL]
+  --project=<value>  (required)
+
+DESCRIPTION
+  create a database for a project, ensuring addon and instance are installed
+
+EXAMPLES
+  $ disco postgres:create
+```
+
+_See code: [src/commands/postgres/create.ts](https://github.com/letsdiscodev/cli/blob/main/src/commands/postgres/create.ts)_
+
 ## `disco postgres:databases:add`
 
 add a Postgres database
@@ -1176,21 +1276,47 @@ EXAMPLES
 
 _See code: [src/commands/postgres/instances/remove.ts](https://github.com/letsdiscodev/cli/blob/main/src/commands/postgres/instances/remove.ts)_
 
+## `disco postgres:tunnel`
+
+create a temporary tunnel to access Postgres through localhost
+
+```
+USAGE
+  $ disco postgres:tunnel --project <value> [--disco <value>] [--env-var <value>] [--port <value>]
+
+FLAGS
+  --disco=<value>
+  --env-var=<value>
+  --port=<value>
+  --project=<value>  (required)
+
+DESCRIPTION
+  create a temporary tunnel to access Postgres through localhost
+
+EXAMPLES
+  $ disco postgres:tunnel
+```
+
+_See code: [src/commands/postgres/tunnel.ts](https://github.com/letsdiscodev/cli/blob/main/src/commands/postgres/tunnel.ts)_
+
 ## `disco projects:add`
 
 add a project
 
 ```
 USAGE
-  $ disco projects:add --name <value> [--domain <value>] [--github <value>] [--branch <value>] [--disco <value>]
+  $ disco projects:add --name <value> --github <value> [--domain <value>] [--branch <value>] [--deployPublicRepo]
+    [--disco <value>]
 
 FLAGS
-  --branch=<value>  the branch of the repository to use
-  --disco=<value>   server to use
-  --domain=<value>  domain name where the app will be served, e.g. www.example.com
-  --github=<value>  full name of the Github repository, including user or organization and repository name, e.g.
-                    myuser/myproject
-  --name=<value>    (required) project name
+  --branch=<value>    the branch of the repository to use
+  --deployPublicRepo  deploy a public repository without checking for GitHub access. Note that "git push" to the repo
+                      will not trigger a new deployment
+  --disco=<value>     server to use
+  --domain=<value>    domain name where the app will be served, e.g. www.example.com
+  --github=<value>    (required) full name of the Github repository, including user or organization and repository name,
+                      e.g. myuser/myproject
+  --name=<value>      (required) project name
 
 DESCRIPTION
   add a project
@@ -1291,32 +1417,6 @@ EXAMPLES
 ```
 
 _See code: [src/commands/run.ts](https://github.com/letsdiscodev/cli/blob/main/src/commands/run.ts)_
-
-## `disco runcommand [PROJECT] [COMMAND] [ARGS]`
-
-run a service-level (e.g. postgres) command
-
-```
-USAGE
-  $ disco runcommand [PROJECT...] [COMMAND...] [ARGS...] [--timeout <value>] [--disco <value>]
-
-ARGUMENTS
-  PROJECT...  project to run command on
-  COMMAND...  command to run
-  ARGS...     args to pass to command
-
-FLAGS
-  --disco=<value>
-  --timeout=<value>  [default: 600]
-
-DESCRIPTION
-  run a service-level (e.g. postgres) command
-
-EXAMPLES
-  $ disco runcommand postgres db:add -- "--project flask"
-```
-
-_See code: [src/commands/runcommand.ts](https://github.com/letsdiscodev/cli/blob/main/src/commands/runcommand.ts)_
 
 ## `disco scale SERVICES`
 
@@ -1453,7 +1553,7 @@ _See code: [@oclif/plugin-update](https://github.com/oclif/plugin-update/blob/ma
 
 ## `disco volumes:export`
 
-TODO describe the command here
+ export a volume
 
 ```
 USAGE
@@ -1465,7 +1565,7 @@ FLAGS
   --volume=<value>   (required)
 
 DESCRIPTION
-  TODO describe the command here
+  export a volume
 
 EXAMPLES
   $ disco volumes:export
@@ -1475,7 +1575,7 @@ _See code: [src/commands/volumes/export.ts](https://github.com/letsdiscodev/cli/
 
 ## `disco volumes:import`
 
-TODO describe the command here
+ import a volume
 
 ```
 USAGE
@@ -1487,7 +1587,7 @@ FLAGS
   --volume=<value>   (required)
 
 DESCRIPTION
-  TODO describe the command here
+  import a volume
 
 EXAMPLES
   $ disco volumes:import
