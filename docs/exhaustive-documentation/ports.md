@@ -72,7 +72,7 @@ All ports are exposed in this private network. For example, we could have an int
 
 `web` could also expose other ports to be made available internally without exposing them to the internet. Only the port of `web` that is defined in `port` is exposed to the internet (defaulting to `8000` when none is specified).
 
-## Publishing Ports Extenally
+## Publishing Ports Externally
 
 In the case where you would like to expose a port externally, bypassing the reverse proxy, you can it like so:
 
