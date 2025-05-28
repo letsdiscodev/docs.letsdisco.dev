@@ -15,6 +15,9 @@ You will also need a dedicated domain name for the server itself (in addition to
 First, you need to install disco on your server. For this, you run `disco init` and you pass it the SSH `user@DOMAIN` to use for disco.
 
 For example, if the user is `root` and the domain is `disco.example.com`
+
+**NOTE**: you need to run this command on *your* computer, not on your server. ie, install `disco` and run all of these commands on your development machine.
+
 ```bash
 disco init root@disco.example.com
 ```
