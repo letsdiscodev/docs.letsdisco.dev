@@ -12,11 +12,11 @@ You will also need a dedicated domain name for the server itself (in addition to
 
 ## Step One: disco init
 
-First, you need to install disco on your server. For this, you run `disco init` and you pass it the SSH `user@DOMAIN` to use for disco.
+Once you've installed the CLI on your local development machine, we will initialize your server. For this, you run `disco init` on your computer and pass it the ssh `USER@DOMAIN` combination that the CLI will use to connect to your server.
 
-For example, if the user is `root` and the domain is `disco.example.com`
+**NOTE**: you need to run this command on *your* computer, not on your server. ie, install the `disco` CLI and run all of the commands below on your development machine.
 
-**NOTE**: you need to run this command on *your* computer, not on your server. ie, install `disco` and run all of these commands on your development machine.
+For example, if the user is `root` and the domain is `disco.example.com`:
 
 ```bash
 disco init root@disco.example.com
@@ -24,9 +24,8 @@ disco init root@disco.example.com
 
 ## Step Two: Add the Github app
 
-Once disco is installed, it will need to be connected to Github.
+Once disco is installed, it will need to be connected to Github. Run:
 
-Run
 ```bash
 disco github:apps:add
 ```
