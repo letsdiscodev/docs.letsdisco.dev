@@ -6,13 +6,15 @@ sidebar_position: 1
 
 ### Easy install
 
+The CLI is meant to be installed on your own, local development machine. You don't need to install it on any of your servers.
+
 The easiest way to set up the CLI under Linux and macOS is to run:
 
 ```bash
 curl https://cli-assets.letsdisco.dev/install.sh | sh
 ```
 
-The installation script above requires sudo.
+The installation script above requires sudo to create symbolic links under `/usr/local`. 
 
 ---
 
