@@ -1,3 +1,7 @@
+# ARCHIVED - moved within disco.cloud/docs/
+
+---
+
 # disco docs
 
 https://docs.letsdisco.dev/
